@@ -1,7 +1,5 @@
 # Registro individual — AV1.1
 
-> **Como usar:** copie este modelo e substitua os espaços em branco pelas suas respostas. Consulte o [passo a passo da aula](README.md) e o [guia com exemplo de evidência](../README.md). Remova esta orientação da entrega; mantenha suas respostas e evidências em até uma página.
-
 **Limite: uma página, incluindo evidências essenciais.** Estudante: Daniel Albino de Castro Ferraz — Data: 14/02/1993
 Origem: cartões C1–C3 fictícios do enunciado.
 
@@ -17,6 +15,6 @@ Origem: cartões C1–C3 fictícios do enunciado.
 **Comparação com minha escolha (restrição e consequência):** Sem IA, os testes seriam definidos manualmente a partir de R3 e da massa de dados, reduzindo o risco de a IA sugerir casos desalinhados ao contrato, porém exigindo mais trabalho manual. Com assistência, é possível economizar tempo na elaboração dos casos de teste, mas é necessária uma revisão humana mais cuidadosa para garantir aderência aos requesitos.
 **Limite da delegação e condição para rever a escolha:** O limite da delegação nesse caso seria a aprovação final dos testes, que deve permanecer com o responsável humano. Eu reveria a escolha por assistencia caso R3 estivesse ambígua ou incompleta, pois nesse cenario a IA nao teria uma referencia confiavel para propor os testes oque poderia demandar muito trabalho de revisão e/ou refatoração.
 
-**Uso de IA na elaboração deste registro:** não utilizada / ferramenta e modelo visíveis: Não utilizada; tarefa delegada e contexto: ___; trecho aproveitado: ___; minha verificação/intervenção: ___. Use “não informado” para metadados indisponíveis. O raciocínio e a decisão registrados são meus.
+**Uso de IA na elaboração deste registro:** ferramenta e modelo visíveis: GPT-5.6 Sol; tarefa delegada e contexto: Apoio para interpretar o enunciado e entender como preencher cada parte; trecho aproveitado: orientações sobre como interpretar os campos do template e sugestões de organização das respostas.; minha verificação/intervenção: formulei as respostas com base nas regras e na massa de dados fornecidas pela atividade, conferindo pessoalmente os resultados e utilizando a IA apenas como apoio de interpretação, organização e formatação. O raciocínio e as decisões registrados são meus.
 
 **Revisão:** [x] três decisões; [x] exemplo explicado; [x] alternativa e limite; [x] até uma página.
