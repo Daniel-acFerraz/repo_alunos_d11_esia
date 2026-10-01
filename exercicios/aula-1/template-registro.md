@@ -2,7 +2,7 @@
 
 > **Como usar:** copie este modelo e substitua os espaços em branco pelas suas respostas. Consulte o [passo a passo da aula](README.md) e o [guia com exemplo de evidência](../README.md). Remova esta orientação da entrega; mantenha suas respostas e evidências em até uma página.
 
-**Limite: uma página, incluindo evidências essenciais.** Estudante: ___ — Data: ___
+**Limite: uma página, incluindo evidências essenciais.** Estudante: Daniel Albino de Castro Ferraz — Data: 14/02/1993
 Origem: cartões C1–C3 fictícios do enunciado.
 
 | Cartão | Como faria sem IA / entrada e resultado | Modalidade e justificativa ligada ao cartão | O que conferir para aprovar | Responsável humano |
