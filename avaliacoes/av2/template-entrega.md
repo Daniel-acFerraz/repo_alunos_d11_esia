@@ -34,7 +34,7 @@ Limite concreto da cobertura e consequência para minha decisão: A análise nã
 | T2 | V-02 + solicitante `Oficina` | Igual / fechado | true | false | inferido - divergente de R3 | O candidato bloqueia chamados `fechado` mesmo que R3 determine que o estado não deve interferir, apenas o departamento |
 | T3 | V-03 + `solicitante Oficina` | Diferente / aberto | false | false | inferido - conforme R3 | O acesso é negado conforme R3, visto que o chamado pertence a outro departamento. |
 | T4 | V-04 + solicitante `Oficina` | Diferente / fechado | false | false | inferido - conforme R3 | O resultado coincide com R3, embora o código também considere indevidamente o estado |
-<br>
+
 **E1 — trecho do contrato e localização:** Em caso/regras.md: “`pode_visualizar` permite acesso somente à pessoa do mesmo departamento do chamado, independentemente de estado ou prioridade.”<br>
 **E2 — trecho do código + percurso lógico de um caso decisivo e um controle:** Código analisado: `chamado["departamento"] == departamento and chamado["estado"] != "fechado"`. Em T1, o departamento é igual (true) e o estado é aberto (true para != "fechado"), resultando em true.
 Em T2, o departamento também é igual (true), mas o estado é fechado (false), resultando em false. T2 diverge de R3 porque o estado passa a impedir um acesso que deveria depender apenas do departamento.<br>
