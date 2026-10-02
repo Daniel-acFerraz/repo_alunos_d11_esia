@@ -36,7 +36,7 @@ Limite concreto da cobertura e consequência para minha decisão: A análise nã
 | T4 | V-04 + solicitante `Oficina` | Diferente / fechado | false | false | inferido - conforme R3 | O resultado coincide com R3, embora o código também considere indevidamente o estado |
 <br>
 **E1 — trecho do contrato e localização:** Em caso/regras.md: “`pode_visualizar` permite acesso somente à pessoa do mesmo departamento do chamado, independentemente de estado ou prioridade.”<br>
-**E2 — trecho do código + percurso lógico de um caso decisivo e um controle:** Código analisado: ` chamado["departamento"] == departamento and chamado["estado"] != "fechado" `. Em T1, o departamento é igual (true) e o estado é aberto (true para != "fechado"), resultando em true.
+**E2 — trecho do código + percurso lógico de um caso decisivo e um controle:** Código analisado: ```chamado["departamento"] == departamento and chamado["estado"] != "fechado"```. Em T1, o departamento é igual (true) e o estado é aberto (true para != "fechado"), resultando em true.
 Em T2, o departamento também é igual (true), mas o estado é fechado (false), resultando em false. T2 diverge de R3 porque o estado passa a impedir um acesso que deveria depender apenas do departamento.<br>
 **E3 — trecho da documentação e confronto com R3/código:** A documentação afirma que “chamados fechados ficam indisponíveis”. Esse comportamento esta de acordo com o código candidato, que exige estado != "fechado", mas ambos não estao de acordo com R3, pois o contrato determina que a visibilidade depende somente do departamento, independentemente do estado.<br>
 **Execução, se escolhida — ambiente, comando e trecho de saída:** não realizada.<br>
