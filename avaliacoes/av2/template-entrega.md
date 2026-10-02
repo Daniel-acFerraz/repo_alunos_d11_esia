@@ -26,19 +26,20 @@ Limite concreto da cobertura e consequência para minha decisão: A análise nã
 
 ## Anexo técnico — trechos essenciais
 
-**Dados e condições comuns:** referência aos registros de insumos.md ou dicionários completos, departamento solicitante e valores mantidos: ___
+**Dados e condições comuns:** referência aos registros de insumos.md ou dicionários completos, departamento solicitante e valores mantidos: utilizados os registros V-01, V-02, V-03 e V-04 fornecidos em insumos.md. Utilizei o departamento `Oficina` nos quatro casos. As entradas são consideradas válidas conforme o contrato. portanto impacto e urgência não são usados como critérios de decisão.
 
 | Caso | Entrada/referência + solicitante | Relação de departamento / estado | Esperado por R3 | Retorno do candidato | Status observado/inferido | Interpretação |
 |---|---|---|---|---|---|---|
-| T1 | | Igual / aberto | | | | |
-| T2 | | Igual / fechado | | | | |
-| T3 | | Diferente / aberto | | | | |
-| T4 | | Diferente / fechado | | | | |
+| T1 | V-01 + solicitante `Oficina` | Igual / aberto | true | true | inferido - conforme R3 | O acesso é permitido e coincide com R3, visto que o chamado pertence ao mesmo departamento |
+| T2 | V-02 + solicitante `Oficina` | Igual / fechado | true | false | inferido - divergente de R3 | O candidato bloqueia chamados `fechado` mesmo que R3 determine que o estado não deve interferir, apenas o departamento |
+| T3 | V-03 + `solicitante Oficina` | Diferente / aberto | false | false | inferido - conforme R3 | O acesso é negado conforme R3, visto que o chamado pertence a outro departamento. |
+| T4 | V-04 + solicitante `Oficina` | Diferente / fechado | false | false | inferido - conforme R3 | O resultado coincide com R3, embora o código também considere indevidamente o estado |
+<br>
+**E1 — trecho do contrato e localização:** Em caso/regras.md: “`pode_visualizar` permite acesso somente à pessoa do mesmo departamento do chamado, independentemente de estado ou prioridade.”<br>
+**E2 — trecho do código + percurso lógico de um caso decisivo e um controle:** ódigo analisado: `chamado["departamento"] == departamento and chamado["estado"] != "fechado"`. Em T1, o departamento é igual (true) e o estado é aberto (true para != "fechado"), resultando em true.
+Em T2, o departamento também é igual (true), mas o estado é fechado (false), resultando em false. T2 diverge de R3 porque o estado passa a impedir um acesso que deveria depender apenas do departamento.<br>
+**E3 — trecho da documentação e confronto com R3/código:** A documentação afirma que “chamados fechados ficam indisponíveis”. Esse comportamento esta de acordo com o código candidato, que exige estado != "fechado", mas ambos não estao de acordo com R3, pois o contrato determina que a visibilidade depende somente do departamento, independentemente do estado.<br>
+**Execução, se escolhida — ambiente, comando e trecho de saída:** não realizada.<br>
+**Alternativa/ajuste e revalidação:** comportamento proposto: a decisão deve considerar somente se o departamento do chamado é igual ao departamento solicitante, sem utilizar o estado, impacto ou urgência como condição de acesso.<br>; T1–T4 após ajuste (esperado/retorno/status): Com o ajuste para ficar conforme R3, os resultados esperados seriam: T1 `true`; T2 `true`; T3 `false`; T4 `false`; limite: A matriz não cobre o status `em_andamento` nem entradas inválidas, portanto a conclusão se restringiria ao comportamento da função isolada nos quatro cenários analisados.
 
-**E1 — trecho do contrato e localização:** ___
-**E2 — trecho do código + percurso lógico de um caso decisivo e um controle:** ___
-**E3 — trecho da documentação e confronto com R3/código:** ___
-**Execução, se escolhida — ambiente, comando e trecho de saída:** ___ / não realizada.
-**Alternativa/ajuste e revalidação:** comportamento proposto: ___; T1–T4 após ajuste (esperado/retorno/status): ___; limite: ___.
-
-**Checklist:** [ ] 4 combinações; [ ] critérios prévios; [ ] código e texto; [ ] status; [ ] alternativa; [ ] limites/IA; [ ] 2+2 páginas.
+**Checklist:** [x] 4 combinações; [x] critérios prévios; [x] código e texto; [x] status; [x] alternativa; [x] limites/IA; [x] 2+2 páginas.
