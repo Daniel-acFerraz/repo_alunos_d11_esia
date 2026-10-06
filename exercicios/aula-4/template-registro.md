@@ -24,8 +24,8 @@ def listar_ativos_proposta(chamados):
 |---|---|---|
 | `TR-41, TR-42, TR-43, TR-44` |  `TR-41, TR-42, TR-44` | Previsto por inspeção: `TR-41, TR-42, TR-44`<br> De acordo com R2 |
 
-**Limite remanescente e condição para rever o parecer:** O limite são os casos de testes utilizados. No caso apresentado para conferir a ordem de entrada foi `TR-41, TR-42, TR-43, TR-44`, nao cobre entradas vazias ou outras combinações de registros. Eu reveria o parecer caso ao testar a função ajustada uma nova verificação mostrasse que a ordem ainda não esta sendo preservada ou que algum estado esta sendo tratado incorretamente.
-**Origem dos dados e da análise:** candidato/teste/entrada simulados; <br>método próprio: inspeção;<br> comando e trecho de saída, se executado: não realizado.
+**Limite remanescente e condição para rever o parecer:** O limite são os casos de testes utilizados. No caso apresentado para conferir a ordem de entrada foi `TR-41, TR-42, TR-43, TR-44`, nao cobre entradas vazias ou outras combinações de registros. Eu reveria o parecer caso ao testar a função ajustada uma nova verificação mostrasse que a ordem ainda não esta sendo preservada ou que algum estado esta sendo tratado incorretamente.<br>
+**Origem dos dados e da análise:** candidato/teste/entrada simulados; <br>método próprio: inspeção;<br> comando e trecho de saída, se executado: não realizado.<br>
 **Uso de IA neste registro:** não utilizada; tarefa/contexto: ___; trecho aproveitado e minha verificação: ___.
 
 **Revisão:** [x] comparação com R2; [x] alcance do teste; [x] ajuste/revalidação; [x] status; [x] uma página.
